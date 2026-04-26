@@ -1,0 +1,28 @@
+{
+  "name": "git-automation",
+  "version": "1.0.0",
+  "description": "Git and GitHub automation skills for Claude Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "pr",
+    "automation",
+    "claude",
+    "mcp"
+  ],
+  "author": "Rupa",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/server-github": "^2025.4.8",
+    "@octokit/rest": "^21.0.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

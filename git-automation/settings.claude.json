@@ -1,0 +1,19 @@
+{
+    "permissions": {
+        "allow": [
+            "Bash(gh:*)",
+            "Bash(git:*)",
+            "Bash(python3:*)"
+        ]
+    },
+    "enabledMcpjsonServers": [
+        "github"
+    ],
+    "apiKeyHelper": "./load-env.sh",
+    "skillOverrides": {
+        "create-pr": "on",
+        "review-pr": "on",
+        "merge-pr": "on"
+    },
+    "outputStyle": "default"
+}
