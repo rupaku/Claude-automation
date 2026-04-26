@@ -1,3 +1,9 @@
+---
+name: transition-ticket
+description: Move Jira tickets through workflow states with comments, reassignment, and resolution
+allowed-tools: mcp__atlassian
+---
+
 # Transition Jira Ticket Skill
 
 ## Overview

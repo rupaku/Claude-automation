@@ -61,18 +61,18 @@ See [GITHUB_MCP_INTEGRATION.md](./GITHUB_MCP_INTEGRATION.md) for detailed setup 
 ## Architecture Notes
 
 ### Core Structure
-- **Skills**: Located in `.claude/skill/` directory
+- **Skills**: Located in `.claude/skills/` directory
   - `create-pr/` - Create pull request skill
   - `review-pr/` - Review pull request skill
   - `view-pr/` - View PR details skill
   - `view-pr-comments/` - View PR comments skill
   - `view-pr-checks/` - View CI/CD checks skill
-  - `merge/` - Merge pull request skill
+  - `merge-pr/` - Merge pull request skill
   - `status/` - Check git status skill
 
 ### GitHub MCP Integration
 - `.mcp.json`: Defines GitHub MCP server configuration
-- `settings.claude.json`: Enables MCP servers and skill overrides
+- `.claude/settings.json`: Permissions and MCP server configuration
 - `GITHUB_MCP_INTEGRATION.md`: Detailed setup and implementation guide
 
 ### API Communication
@@ -90,11 +90,10 @@ See [GITHUB_MCP_INTEGRATION.md](./GITHUB_MCP_INTEGRATION.md) for detailed setup 
 ## Common Development Tasks
 
 ### Adding a New Skill
-1. Create skill folder in `.claude/skill/`
-2. Implement skill function using Octokit.js
-3. Add to `settings.claude.json` skillOverrides
-4. Create documentation file (skill-name.md)
-5. Test with real GitHub PR
+1. Create skill folder in `.claude/skills/<skill-name>/`
+2. Create `SKILL.md` with YAML frontmatter and instructions
+3. Add `allowed-tools` in frontmatter for required permissions
+4. Test with real GitHub PR
 
 ### Working with GitHub API
 ```javascript

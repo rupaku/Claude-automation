@@ -1,3 +1,9 @@
+---
+name: update-ticket
+description: Update existing Jira tickets - modify summary, description, status, assignee, priority, and labels
+allowed-tools: mcp__atlassian
+---
+
 # Update Jira Ticket Skill
 
 ## Overview
