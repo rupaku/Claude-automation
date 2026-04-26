@@ -4,40 +4,58 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository is for Jira automation tools and integrations. It likely contains:
-- Scripts or services that interact with the Jira API
-- Automation workflows for common Jira operations
-- Tools for bulk operations, migrations, or integrations
+This repository contains **Jira automation skills** for Claude Code that streamline ticket management workflows. It provides skills for:
+- Creating new Jira tickets
+- Updating existing ticket fields
+- Transitioning tickets through workflow states
+- Adding comments to tickets
+- Bulk transitioning multiple tickets at once
+
+## Technology Stack
+
+- **Atlassian MCP**: Model Context Protocol server for authenticated Jira API access
+- **Jira Cloud REST API**: Via the `@modelcontextprotocol/server-atlassian` package
 
 ## Development Setup
 
-As the project develops, document:
-- How to install dependencies (`npm install`, `pip install`, etc.)
-- How to configure credentials or environment variables for Jira API access
-- How to run the application or scripts
+### Prerequisites
+1. Jira Cloud instance with API access
+2. Jira API token with appropriate permissions
+3. Node.js (for npx to run the MCP server)
 
-## Build, Test, and Lint Commands
+### Environment Configuration
 
-Add the specific commands when the project structure is finalized:
-- **Build**: [TBD]
-- **Test**: [TBD]
-- **Lint/Format**: [TBD]
-- **Run**: [TBD]
+1. **Create `.env` file** in the project root:
+```bash
+JIRA_HOST="https://your-instance.atlassian.net"
+JIRA_USERNAME="your-email@example.com"
+JIRA_API_TOKEN_with_perm="your_jira_api_token_here"
+```
+
+2. **MCP Server**: Configured in `.mcp.json` — uses `@modelcontextprotocol/server-atlassian`
+
+3. **Verify Setup**: Run `claude` in this directory and check that the Atlassian MCP server connects successfully.
 
 ## Architecture Notes
 
-When code is added, document:
-- Entry points and how scripts/services are invoked
-- How Jira API communication is handled (authentication, request patterns)
-- Major modules and their responsibilities
-- Any external dependencies or integrations
+### Core Structure
+- **Skills**: Located in `.claude/skills/` directory
+  - `create-ticket/` - Create new Jira tickets
+  - `update-ticket/` - Update existing ticket fields
+  - `transition-ticket/` - Move tickets through workflow states
+  - `add-comment/` - Add comments to tickets
+  - `bulk-transition/` - Batch transition multiple tickets
 
-## Common Development Tasks
+### Configuration
+- `.mcp.json`: Defines Atlassian MCP server configuration
+- `.claude/settings.json`: Permissions and MCP server enablement
+- `load-env.sh`: Loads environment variables for Claude Code
 
-As patterns emerge, document:
-- How to add new automation workflows
-- How to work with the Jira API client
-- How to test changes against a Jira instance
+### Adding a New Skill
+1. Create skill folder in `.claude/skills/<skill-name>/`
+2. Create `SKILL.md` with YAML frontmatter and instructions
+3. Add `allowed-tools` in frontmatter for required permissions
+4. Test with your Jira instance
 
 ## Sensitive Information
 

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "atlassian": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-atlassian"
+      ],
+      "env": {
+        "JIRA_HOST": "${JIRA_HOST}",
+        "JIRA_USERNAME": "${JIRA_USERNAME}",
+        "JIRA_API_TOKEN_with_perm": "${JIRA_API_TOKEN_with_perm}"
+      }
+    }
+  }
+}

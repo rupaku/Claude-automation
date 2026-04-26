@@ -1,3 +1,9 @@
+---
+name: create-ticket
+description: Create new Jira tickets with project, type, summary, description, assignee, priority, and labels
+allowed-tools: mcp__atlassian
+---
+
 # Create Jira Ticket Skill
 
 ## Overview

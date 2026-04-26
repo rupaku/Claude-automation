@@ -1,0 +1,26 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+
+# IDE and OS files
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Claude Code
+.claude/settings.local.json

@@ -6,7 +6,7 @@
         "@modelcontextprotocol/server-github"
       ],
       "env": {
-        "GITHUB_TOKEN": "${github-token-mcp}"
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
       }
     }
   }

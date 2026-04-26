@@ -1,3 +1,9 @@
+---
+name: add-comment
+description: Add comments to existing Jira tickets with formatted text, mentions, and visibility restrictions
+allowed-tools: mcp__atlassian
+---
+
 # Add Comment to Jira Ticket Skill
 
 ## Overview

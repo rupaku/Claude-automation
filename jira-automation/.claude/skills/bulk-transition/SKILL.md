@@ -1,3 +1,9 @@
+---
+name: bulk-transition
+description: Move multiple Jira tickets through workflow states in a single operation
+allowed-tools: mcp__atlassian
+---
+
 # Bulk Transition Jira Tickets Skill
 
 ## Overview
